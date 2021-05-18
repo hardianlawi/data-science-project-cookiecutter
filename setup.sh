@@ -10,10 +10,10 @@ check_command_exists () {
 }
 
 download_configs () {
-    wget https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.pre-commit-config.yaml
-    wget https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.flake8
-    wget https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.isort.cfg
-    wget https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/pyproject.toml
+    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.pre-commit-config.yaml
+    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.flake8
+    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.isort.cfg
+    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/pyproject.toml
 }
 
 check_command_exists wget
