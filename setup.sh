@@ -20,4 +20,5 @@ check_command_exists wget
 check_command_exists pre-commit
 download_configs
 
+pre-commit autoupdate
 pre-commit install
