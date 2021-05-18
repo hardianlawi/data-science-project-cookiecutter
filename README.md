@@ -14,7 +14,7 @@ pre-commit autoupdate
 
 ```bash
 wget https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/setup.sh
-bash setup.sh
+bash setup.sh && rm setup.sh
 ```
 
 ## References
