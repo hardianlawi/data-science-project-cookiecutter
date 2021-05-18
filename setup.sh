@@ -9,14 +9,18 @@ check_command_exists () {
     fi
 }
 
-download_configs () {
-    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.pre-commit-config.yaml
-    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.flake8
-    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/.isort.cfg
-    wget -c https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/pyproject.toml
+download_from_pre_commit_configs_repo () {
+    curl https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/$1 > $1
 }
 
-check_command_exists wget
+download_configs () {
+    download_from_pre_commit_configs_repo .pre-commit-config.yaml
+    download_from_pre_commit_configs_repo .flake8
+    download_from_pre_commit_configs_repo .isort.cfg
+    download_from_pre_commit_configs_repo .pyproject.toml
+}
+
+check_command_exists curl
 check_command_exists pre-commit
 download_configs
 
