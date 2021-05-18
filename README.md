@@ -13,8 +13,7 @@ pre-commit autoupdate
 ## Setup
 
 ```bash
-wget https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/setup.sh
-bash setup.sh && rm setup.sh
+curl -s https://raw.githubusercontent.com/hardianlawi/pre-commit-configs/main/setup.sh | bash
 ```
 
 ## References
